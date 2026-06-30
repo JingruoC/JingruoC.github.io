@@ -10,6 +10,8 @@
   --accent-strong-soft: rgba(79, 107, 145, 0.16);
   --shadow: 0 12px 28px rgba(52, 68, 92, 0.08);
   --max-width: 1140px;
+  --section-gap: 24px;
+  --section-heading-gap: 14px;
 }
 
 * {
@@ -258,7 +260,7 @@ a:focus-visible {
 }
 
 .section-block {
-  margin-top: 22px;
+  margin-top: var(--section-gap);
 }
 
 .experience-grid {
@@ -366,7 +368,7 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 18px;
+  margin-bottom: var(--section-heading-gap);
 }
 
 .section-heading a {
@@ -453,6 +455,10 @@ a:focus-visible {
   align-items: flex-start;
   padding: 24px 0;
   border-top: 1px solid var(--line);
+}
+
+#research .research-item:first-of-type {
+  padding-top: 16px;
 }
 
 .research-thumb {
@@ -572,6 +578,14 @@ a:focus-visible {
   padding-bottom: 24px;
 }
 
+#contact .section-heading {
+  margin-bottom: 10px;
+}
+
+#contact > p:first-of-type {
+  margin-top: 0;
+}
+
 @media (max-width: 960px) {
   .hero {
     display: grid;
@@ -684,11 +698,11 @@ a:focus-visible {
   }
 
   .section-block {
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
   .section-heading {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .section-heading h2 {
