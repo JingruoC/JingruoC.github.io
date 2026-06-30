@@ -203,7 +203,7 @@ a:focus-visible {
 
 .bio-block {
   padding: 6px 0 0;
-  max-width: none;
+  max-width: 780px;
 }
 
 .bio-block p {
@@ -416,6 +416,8 @@ a:focus-visible {
 
 .news-row p {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.56;
 }
 
 .news-meta,
@@ -424,6 +426,10 @@ a:focus-visible {
   color: var(--accent);
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.news-meta {
+  font-size: 0.92rem;
 }
 
 .research-tag {
@@ -466,8 +472,10 @@ a:focus-visible {
 
 .research-image {
   display: block;
-  object-fit: cover;
-  background: #fff;
+  object-fit: contain;
+  object-position: center center;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  padding: 10px;
 }
 
 .research-body h3 {
@@ -727,6 +735,7 @@ a:focus-visible {
 
   .research-image {
     aspect-ratio: 1.55 / 1;
+    padding: 8px;
   }
 
   .research-links {
