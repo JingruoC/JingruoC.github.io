@@ -96,7 +96,7 @@ a:focus-visible {
 .hero {
   display: flex;
   gap: 34px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .hero-profile {
@@ -198,6 +198,7 @@ a:focus-visible {
   flex: 1 1 auto;
   min-width: 0;
   display: block;
+  padding-top: 6px;
 }
 
 .bio-block {
@@ -660,6 +661,12 @@ a:focus-visible {
 
   .hero-main {
     padding-top: 0;
+  }
+
+  .hero-profile,
+  .hero-main {
+    width: 100%;
+    min-width: 0;
   }
 
   .bio-block p {
