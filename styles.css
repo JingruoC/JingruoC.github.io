@@ -279,11 +279,11 @@ a:focus-visible {
 
 .orca-backdrop {
   position: absolute;
-  right: 6px;
-  top: -6px;
-  width: clamp(250px, 30vw, 380px);
+  right: 14px;
+  top: 2px;
+  width: clamp(260px, 31vw, 390px);
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.62;
   z-index: 0;
 }
 
@@ -295,7 +295,7 @@ a:focus-visible {
     translate3d(var(--orca-x), var(--orca-y), 0)
     rotate(4deg);
   transform-origin: center;
-  filter: grayscale(0.08) saturate(0.72) brightness(1.08) contrast(0.88);
+  filter: grayscale(0) saturate(0.96) brightness(0.98) contrast(1.12);
   animation: orca-drift 9s ease-in-out infinite;
 }
 
@@ -697,10 +697,10 @@ a:focus-visible {
   }
 
   .orca-backdrop {
-    top: 8px;
-    right: 0;
-    width: clamp(210px, 26vw, 290px);
-    opacity: 0.24;
+    top: 14px;
+    right: 6px;
+    width: clamp(220px, 27vw, 300px);
+    opacity: 0.52;
   }
 }
 
@@ -810,10 +810,10 @@ a:focus-visible {
   }
 
   .orca-backdrop {
-    top: 96px;
-    right: -8px;
-    width: clamp(160px, 38vw, 220px);
-    opacity: 0.18;
+    top: 88px;
+    right: 0;
+    width: clamp(170px, 40vw, 230px);
+    opacity: 0.42;
   }
 
   .research-item {
