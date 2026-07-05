@@ -274,6 +274,7 @@ a:focus-visible {
   position: relative;
   --orca-x: 0px;
   --orca-y: 0px;
+  overflow: hidden;
 }
 
 .orca-backdrop {
