@@ -285,6 +285,17 @@ a:focus-visible {
   pointer-events: none;
   opacity: 0.62;
   z-index: 0;
+  isolation: isolate;
+}
+
+.orca-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: -3%;
+  background:
+    radial-gradient(ellipse at 50% 34%, transparent 0 33%, rgba(252, 251, 248, 0.28) 56%, rgba(252, 251, 248, 0.72) 76%, var(--bg) 96%),
+    linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.18) 62%, var(--bg) 100%);
+  z-index: 1;
 }
 
 .orca-figure {
