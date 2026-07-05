@@ -270,8 +270,47 @@ a:focus-visible {
   filter: saturate(0.72);
 }
 
+.personal-tail {
+  position: relative;
+  --orca-x: 0px;
+  --orca-y: 0px;
+}
+
+.orca-backdrop {
+  position: absolute;
+  right: 6px;
+  top: -6px;
+  width: clamp(250px, 30vw, 380px);
+  pointer-events: none;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.orca-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform:
+    translate3d(var(--orca-x), var(--orca-y), 0)
+    rotate(4deg);
+  transform-origin: center;
+  filter: grayscale(0.08) saturate(0.72) brightness(1.08) contrast(0.88);
+  animation: orca-drift 9s ease-in-out infinite;
+}
+
+@keyframes orca-drift {
+  0%, 100% {
+    transform: translate3d(var(--orca-x), var(--orca-y), 0) rotate(4deg);
+  }
+  50% {
+    transform: translate3d(calc(var(--orca-x) + 8px), calc(var(--orca-y) - 6px), 0) rotate(6deg);
+  }
+}
+
 .section-block {
   margin-top: var(--section-gap);
+  position: relative;
+  z-index: 1;
 }
 
 .experience-grid {
@@ -655,6 +694,13 @@ a:focus-visible {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .orca-backdrop {
+    top: 8px;
+    right: 0;
+    width: clamp(210px, 26vw, 290px);
+    opacity: 0.24;
+  }
 }
 
 @media (max-width: 700px) {
@@ -760,6 +806,13 @@ a:focus-visible {
 
   .research-body h3 {
     font-size: 1.22rem;
+  }
+
+  .orca-backdrop {
+    top: 96px;
+    right: -8px;
+    width: clamp(160px, 38vw, 220px);
+    opacity: 0.18;
   }
 
   .research-item {

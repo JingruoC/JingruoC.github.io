@@ -385,31 +385,64 @@
         </div>
       </section>
 
-      <section class="section-block personal-note" id="beyond">
-        <div class="section-heading">
-          <h2>Off the Clock <span class="heading-emoji" aria-hidden="true">⏰</span></h2>
+      <div class="personal-tail" data-orca-zone>
+        <div class="orca-backdrop" aria-hidden="true">
+          <img
+            class="orca-figure"
+            src="assets/orca-background.png"
+            alt=""
+          />
         </div>
-        <p>
-          In my free time, you will usually find me lifting/working out,
-          gaming (though I do not really have time for Civilization anymore),
-          getting absorbed in historical novels, cooking, and exploring
-          restaurants.
-        </p>
-      </section>
 
-      <section class="section-block contact-block" id="contact">
-        <div class="section-heading">
-          <h2>Contact</h2>
-        </div>
-        <p>
-          I am always happy to connect about research, collaboration, and
-          related opportunities. Let's chat!
-        </p>
-        <ul class="clean-list clean-list-inline">
-          <li><strong>Email</strong><span><a href="mailto:jingruo@infosci.cornell.edu">jingruo@infosci.cornell.edu</a></span></li>
-          <li><strong>Profiles</strong><span><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></span></li>
-        </ul>
-      </section>
+        <section class="section-block personal-note" id="beyond">
+          <div class="section-heading">
+            <h2>Off the Clock <span class="heading-emoji" aria-hidden="true">⏰</span></h2>
+          </div>
+          <p>
+            In my free time, you will usually find me lifting/working out,
+            gaming (though I do not really have time for Civilization anymore),
+            getting absorbed in historical novels, cooking, and exploring
+            restaurants.
+          </p>
+        </section>
+
+        <section class="section-block contact-block" id="contact">
+          <div class="section-heading">
+            <h2>Contact</h2>
+          </div>
+          <p>
+            I am always happy to connect about research, collaboration, and
+            related opportunities. Let's chat!
+          </p>
+          <ul class="clean-list clean-list-inline">
+            <li><strong>Email</strong><span><a href="mailto:jingruo@infosci.cornell.edu">jingruo@infosci.cornell.edu</a></span></li>
+            <li><strong>Profiles</strong><span><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></span></li>
+          </ul>
+        </section>
+      </div>
     </main>
+    <script>
+      (() => {
+        const zone = document.querySelector("[data-orca-zone]");
+        if (!zone) return;
+
+        const setRestingPosition = () => {
+          zone.style.setProperty("--orca-x", "0px");
+          zone.style.setProperty("--orca-y", "0px");
+        };
+
+        setRestingPosition();
+
+        zone.addEventListener("pointermove", (event) => {
+          const rect = zone.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+          const y = ((event.clientY - rect.top) / rect.height - 0.5) * 14;
+          zone.style.setProperty("--orca-x", `${x.toFixed(2)}px`);
+          zone.style.setProperty("--orca-y", `${y.toFixed(2)}px`);
+        });
+
+        zone.addEventListener("pointerleave", setRestingPosition);
+      })();
+    </script>
   </body>
 </html>
