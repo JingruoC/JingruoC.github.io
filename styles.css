@@ -10,8 +10,11 @@
   --accent-strong-soft: rgba(79, 107, 145, 0.16);
   --shadow: 0 12px 28px rgba(52, 68, 92, 0.08);
   --max-width: 1140px;
-  --section-gap: 24px;
-  --section-heading-gap: 14px;
+  --section-gap: 32px;
+  --section-heading-gap: 16px;
+  --interactive-duration: 180ms;
+  --interactive-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --interactive-lift: -1px;
 }
 
 * {
@@ -71,6 +74,9 @@ a:focus-visible {
   font-weight: 500;
   position: relative;
   text-decoration: none;
+  transition:
+    color var(--interactive-duration) var(--interactive-ease),
+    transform var(--interactive-duration) var(--interactive-ease);
 }
 
 .top-nav a::after {
@@ -83,12 +89,20 @@ a:focus-visible {
   background: rgba(79, 107, 145, 0.45);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 160ms ease;
+  transition:
+    transform var(--interactive-duration) var(--interactive-ease),
+    background var(--interactive-duration) var(--interactive-ease);
 }
 
 .top-nav a:hover::after,
 .top-nav a:focus-visible::after {
   transform: scaleX(1);
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  color: var(--accent);
+  transform: translateY(var(--interactive-lift));
 }
 
 .page {
@@ -167,7 +181,10 @@ a:focus-visible {
   display: inline-flex;
   color: var(--accent);
   opacity: 0.9;
-  transition: transform 140ms ease, color 140ms ease;
+  transition:
+    transform var(--interactive-duration) var(--interactive-ease),
+    color var(--interactive-duration) var(--interactive-ease),
+    opacity var(--interactive-duration) var(--interactive-ease);
 }
 
 .icon-links svg {
@@ -179,7 +196,8 @@ a:focus-visible {
 .icon-links a:hover,
 .icon-links a:focus-visible {
   color: var(--accent-2);
-  transform: translateY(-1px);
+  opacity: 1;
+  transform: translateY(var(--interactive-lift));
 }
 
 .clean-list {
@@ -275,15 +293,16 @@ a:focus-visible {
   --orca-x: 0px;
   --orca-y: 0px;
   overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .orca-backdrop {
   position: absolute;
-  right: 14px;
-  top: 2px;
-  width: clamp(260px, 31vw, 390px);
+  right: -18px;
+  bottom: -12px;
+  width: clamp(240px, 26vw, 340px);
   pointer-events: none;
-  opacity: 0.62;
+  opacity: 0.46;
   z-index: 0;
   isolation: isolate;
 }
@@ -291,10 +310,10 @@ a:focus-visible {
 .orca-backdrop::after {
   content: "";
   position: absolute;
-  inset: -3%;
+  inset: -5%;
   background:
-    radial-gradient(ellipse at 50% 34%, transparent 0 33%, rgba(252, 251, 248, 0.28) 56%, rgba(252, 251, 248, 0.72) 76%, var(--bg) 96%),
-    linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.18) 62%, var(--bg) 100%);
+    radial-gradient(ellipse at 52% 42%, transparent 0 40%, rgba(252, 251, 248, 0.18) 60%, rgba(252, 251, 248, 0.56) 78%, var(--bg) 97%),
+    linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.14) 62%, var(--bg) 100%);
   z-index: 1;
 }
 
@@ -304,18 +323,18 @@ a:focus-visible {
   height: auto;
   transform:
     translate3d(var(--orca-x), var(--orca-y), 0)
-    rotate(4deg);
+    rotate(2deg);
   transform-origin: center;
-  filter: grayscale(0) saturate(0.96) brightness(0.98) contrast(1.12);
+  filter: grayscale(0.08) saturate(0.82) brightness(1.01) contrast(1.04);
   animation: orca-drift 9s ease-in-out infinite;
 }
 
 @keyframes orca-drift {
   0%, 100% {
-    transform: translate3d(var(--orca-x), var(--orca-y), 0) rotate(4deg);
+    transform: translate3d(var(--orca-x), var(--orca-y), 0) rotate(2deg);
   }
   50% {
-    transform: translate3d(calc(var(--orca-x) + 8px), calc(var(--orca-y) - 6px), 0) rotate(6deg);
+    transform: translate3d(calc(var(--orca-x) + 7px), calc(var(--orca-y) - 5px), 0) rotate(3.5deg);
   }
 }
 
@@ -436,6 +455,9 @@ a:focus-visible {
 .section-heading a {
   font-size: 0.98rem;
   font-weight: 600;
+  transition:
+    color var(--interactive-duration) var(--interactive-ease),
+    transform var(--interactive-duration) var(--interactive-ease);
 }
 
 .news-list-panel {
@@ -605,6 +627,11 @@ a:focus-visible {
   text-decoration: none;
   font-size: 0.88rem;
   line-height: 1.2;
+  transition:
+    background var(--interactive-duration) var(--interactive-ease),
+    color var(--interactive-duration) var(--interactive-ease),
+    transform var(--interactive-duration) var(--interactive-ease),
+    box-shadow var(--interactive-duration) var(--interactive-ease);
 }
 
 .research-links svg {
@@ -621,6 +648,9 @@ a:focus-visible {
 .research-links a:hover,
 .research-links a:focus-visible {
   background: rgba(79, 107, 145, 0.14);
+  color: var(--accent-2);
+  transform: translateY(var(--interactive-lift));
+  box-shadow: 0 8px 18px rgba(79, 107, 145, 0.12);
 }
 
 .clean-list {
@@ -646,6 +676,7 @@ a:focus-visible {
   color: var(--text);
   font-size: 1rem;
   line-height: 1.68;
+  max-width: none;
 }
 
 #beyond .section-heading {
@@ -653,7 +684,7 @@ a:focus-visible {
 }
 
 .contact-block {
-  padding-bottom: 24px;
+  padding-bottom: 8px;
 }
 
 #contact .section-heading {
@@ -662,6 +693,15 @@ a:focus-visible {
 
 #contact > p:first-of-type {
   margin-top: 0;
+}
+
+.footer-note {
+  margin: 18px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(215, 221, 229, 0.72);
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 960px) {
@@ -708,10 +748,10 @@ a:focus-visible {
   }
 
   .orca-backdrop {
-    top: 14px;
-    right: 6px;
-    width: clamp(220px, 27vw, 300px);
-    opacity: 0.52;
+    right: -14px;
+    bottom: -8px;
+    width: clamp(210px, 24vw, 280px);
+    opacity: 0.4;
   }
 }
 
@@ -783,7 +823,7 @@ a:focus-visible {
   }
 
   .section-block {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   .section-heading {
@@ -821,10 +861,10 @@ a:focus-visible {
   }
 
   .orca-backdrop {
-    top: 88px;
-    right: 0;
-    width: clamp(170px, 40vw, 230px);
-    opacity: 0.42;
+    right: -28px;
+    bottom: 8px;
+    width: clamp(150px, 42vw, 210px);
+    opacity: 0.3;
   }
 
   .research-item {
@@ -863,6 +903,12 @@ a:focus-visible {
 
   .contact-block {
     padding-bottom: 12px;
+  }
+
+  .footer-note {
+    margin-top: 14px;
+    padding-top: 10px;
+    font-size: 0.88rem;
   }
 }
 
