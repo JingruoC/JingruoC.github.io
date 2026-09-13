@@ -72,7 +72,7 @@
               Hi! I am a second-year PhD student in
               <a href="https://bowers.cornell.edu/" target="_blank" rel="noreferrer">Information Science</a> at
               <span class="inline-highlight inline-highlight-soft">Cornell University</span>,
-              advised by Susan Fussell in the Communication and
+              advised by <a href="https://sfussell.hci.cornell.edu/" target="_blank" rel="noreferrer">Susan Fussell</a> in the Communication and
               Collaborative Technologies Lab.
             </p>
             <p>
@@ -104,9 +104,13 @@
         <div class="news-list-panel">
           <article class="news-row">
             <p class="news-meta">August 2026</p>
+            <p><em>The Impact of Personalized AI Response Suggestions on Content Creators' Direct Messaging</em> was conditionally accepted to ACM GROUP 2027 🎉</p>
+          </article>
+          <article class="news-row">
+            <p class="news-meta">August 2026</p>
             <p>
-              Two collaborative papers on AI-supported claim verification were accepted to EMNLP 2026 Main and ICWSM 2026:
-              <em>Conflict-aware Claim Verification</em> and
+              Two collaborative papers on AI-supported claim verification were accepted to EMNLP 2026 Main and ICWSM 2027:
+              <em>CoVer: Conflict-Aware Claim Verification</em> and
               <em>Commenotes: Synthesizing Organic Comments to Support Community-Based Fact-Checking</em>. 🔍
             </p>
           </article>
@@ -136,11 +140,11 @@
           </article>
           <article class="news-row">
             <p class="news-meta">January 2026</p>
-            <p><em>Characterizing unintended consequences in human-gui agent collaboration for web browsing</em> was accepted to CHI 2026 🇪🇸</p>
+            <p><em>Characterizing Unintended Consequences of GUI Agents For Web Browsing</em> was accepted to CHI 2026 🇪🇸</p>
           </article>
           <article class="news-row">
             <p class="news-meta">January 2026</p>
-            <p><em>SituFont: A Just-in-Time Adaptive Intervention System for Enhancing Mobile Readability in Situational Visual Impairments</em> was accepted to CHI 2026 🇪🇸</p>
+            <p><em>SituFont: A Just-in-Time Adaptive Intervention Interface for Enhancing Mobile Readability in Situational Visual Impairments</em> was accepted to CHI 2026 🇪🇸</p>
           </article>
           <article class="news-row">
             <p class="news-meta">November 2025</p>
@@ -155,20 +159,149 @@
 
       <section class="section-block" id="research">
         <div class="section-heading">
-          <h2>Selected Publications</h2>
+          <h2>Publications</h2>
         </div>
 
-        <article class="research-item">
+        <input class="publication-control" type="radio" name="publication-view" id="publication-view-selected" checked />
+        <input class="publication-control" type="radio" name="publication-view" id="publication-view-all" />
+        <input class="publication-control" type="radio" name="publication-topic" id="publication-topic-all" checked />
+        <input class="publication-control" type="radio" name="publication-topic" id="publication-topic-human-ai" />
+        <input class="publication-control" type="radio" name="publication-topic" id="publication-topic-social" />
+        <input class="publication-control" type="radio" name="publication-topic" id="publication-topic-access" />
+
+        <div class="publication-toolbar">
+          <div class="publication-tabs" aria-label="Publication views">
+            <label class="publication-tab" for="publication-view-selected">Selected</label>
+            <label class="publication-tab" for="publication-view-all">All Publications</label>
+          </div>
+          <div class="publication-filters" aria-label="Filter publications by topic">
+            <label class="publication-filter" for="publication-topic-all">All topics</label>
+            <label class="publication-filter" for="publication-topic-human-ai">Human–AI Interaction</label>
+            <label class="publication-filter" for="publication-topic-social">Social Computing &amp; Information Integrity</label>
+            <label class="publication-filter" for="publication-topic-access">Accessibility &amp; Cognition</label>
+          </div>
+        </div>
+
+        <div class="publication-list" id="publication-list">
+        <article class="research-item" data-selected="true" data-topics="human-ai">
+          <div class="research-thumb">
+            <img
+              class="research-image"
+              src="assets/papers/group-2027-ai-dm.png"
+              alt="System diagram for personalized AI response suggestions in content creators' direct messaging"
+            />
+          </div>
+          <div class="research-body">
+            <p class="research-tag">GROUP 2027 · To appear</p>
+            <h3>The Impact of Personalized AI Response Suggestions on Content Creators' Direct Messaging</h3>
+            <p class="research-authors">
+              Kang, E. J., <strong>Chen, J.</strong>, Fussell, S. R.
+            </p>
+            <p>
+              This work examines how personalized AI response suggestions shape content creators' communication through direct messages.
+            </p>
+            <p class="research-status">Publication link forthcoming</p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="true" data-topics="social">
+          <div class="research-thumb">
+            <img
+              class="research-image"
+              src="assets/papers/emnlp-2026-cover.png"
+              alt="CoVer pipeline for conflict-aware claim verification"
+            />
+          </div>
+          <div class="research-body">
+            <p class="research-tag">EMNLP 2026 Main · To appear</p>
+            <h3>CoVer: Conflict-Aware Claim Verification</h3>
+            <p class="research-authors">
+              Zhang, S., Shi, D., Chu, B., Wang, H., Chuai, Y., Wang, Y., <strong>Chen, J.</strong>, Li, S., Yi, X., Li, H.
+            </p>
+            <p>
+              CoVer supports claim verification when evidence sources conflict, prioritizing factual consensus over misleading signals.
+            </p>
+            <p class="research-links"><a href="https://arxiv.org/abs/2609.00508" target="_blank" rel="noreferrer">arXiv</a></p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="false" data-topics="social">
+          <div class="research-thumb">
+            <img
+              class="research-image"
+              src="assets/papers/icwsm-2027-commenotes.png"
+              alt="Timeline showing organic comments preceding a community note"
+            />
+          </div>
+          <div class="research-body">
+            <p class="research-tag">ICWSM 2027 · To appear</p>
+            <h3>Commenotes: Synthesizing Organic Comments to Support Community-Based Fact-Checking</h3>
+            <p class="research-authors">
+              Zhang, S., Wang, L., Shi, D., Chuai, Y., <strong>Chen, J.</strong>, Chen, Y., Wang, Y., Wang, Y., Yi, X., Li, H.
+            </p>
+            <p>
+              Commenotes synthesizes organic social-media comments into timely, community-grounded fact-checking notes.
+            </p>
+            <p class="research-links"><a href="https://arxiv.org/abs/2509.11052" target="_blank" rel="noreferrer">arXiv</a></p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="true" data-topics="access">
+          <div class="research-thumb">
+            <img
+              class="research-image"
+              src="assets/papers/assets-2026-safety-autonomy.png"
+              alt="Enablement and protective accessibility mechanisms for generative AI"
+            />
+          </div>
+          <div class="research-body">
+            <p class="research-tag">ASSETS 2026 · To appear</p>
+            <h3>Balancing Safety and Autonomy: Accessibility-Oriented Interventions in Generative AI for Cognitive Impairment</h3>
+            <p class="research-authors">
+              Meng, Y.*, <strong>Chen, J.</strong>*, Ye, L., Liu, B., Lu, Z.
+            </p>
+            <p>
+              This work examines how generative AI interventions can protect users with cognitive impairment without unnecessarily restricting their autonomy.
+            </p>
+            <p class="research-links"><a href="https://arxiv.org/abs/2608.17175" target="_blank" rel="noreferrer">arXiv</a></p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="true" data-topics="access">
+          <div class="research-thumb">
+            <img
+              class="research-image"
+              src="assets/papers/cscw-2026-adhd.png"
+              alt="Figure for ADHD task management paper"
+            />
+          </div>
+          <div class="research-body">
+            <p class="research-tag">CSCW 2026 · To appear</p>
+            <h3>"Not Just Me and My To-Do List": Understanding Challenges of Task Management for Adults with ADHD and the Need for AI-Augmented Social Scaffolds</h3>
+            <p class="research-authors">
+              <strong>Chen, J.</strong>*, Meng, Y.*, Nie, K.
+            </p>
+            <p>
+              This paper shows how task management among adults with ADHD is relational and co-constructed, motivating socially aware AI systems for co-regulation and nonlinear attention rhythms.
+            </p>
+            <p class="research-links">
+              <a href="assets/pdfs/cscw-2026-adhd.pdf" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://arxiv.org/abs/2603.17258" target="_blank" rel="noreferrer">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="true" data-topics="human-ai">
           <div class="research-thumb">
             <img
               class="research-image"
               src="assets/papers/chi-2026-gui-agent.png"
-              alt="Figure for Characterizing unintended consequences in human-gui agent collaboration for web browsing"
+              alt="Figure for Characterizing Unintended Consequences of GUI Agents For Web Browsing"
             />
           </div>
           <div class="research-body">
             <p class="research-tag">CHI 2026</p>
-            <h3>Characterizing unintended consequences in human-gui agent collaboration for web browsing</h3>
+            <h3>Characterizing Unintended Consequences of GUI Agents For Web Browsing</h3>
             <p class="research-authors">
               Zhang, S.*, <strong>Chen, J.</strong>*, Gao, Z., Gao, J., Yi, X., Li, H.
             </p>
@@ -176,25 +309,13 @@
               This paper characterizes user-reported issues in GUI-agent web browsing across phenomena, influences, and user-centric mitigation.
             </p>
             <p class="research-links">
-              <a href="assets/pdfs/chi-2026-gui-agent.pdf" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm6 1.5V9h4.5"/>
-                  <path d="M8 16.5h1.4c1.35 0 2.2-.78 2.2-2.05s-.85-2.05-2.2-2.05H8v4.1Zm1.2-1.02v-2.06h.22c.7 0 1.16.38 1.16 1.03s-.46 1.03-1.16 1.03H9.2Zm3.52 1.02h1.2v-1.53h.95c1.02 0 1.76-.61 1.76-1.59s-.74-1.58-1.76-1.58h-2.15v4.7Zm1.2-2.52v-1.16h.73c.47 0 .76.22.76.58 0 .37-.29.58-.76.58h-.73Zm3.37 2.52h1.2v-1.88h1.74v-.99h-1.74v-.85h1.95v-.98h-3.15v4.7Z"/>
-                </svg>
-                <span>pdf</span>
-              </a>
-              <a href="https://dl.acm.org/doi/10.1145/3772318.3790696" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.59 13.41a1.99 1.99 0 0 0 2.82 0l3.18-3.18a2 2 0 1 0-2.83-2.83l-1.41 1.41"/>
-                  <path d="M13.41 10.59a1.99 1.99 0 0 0-2.82 0L7.4 13.77a2 2 0 1 0 2.83 2.83l1.41-1.41"/>
-                </svg>
-                <span>link</span>
-              </a>
+              <a href="assets/pdfs/chi-2026-gui-agent.pdf" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://doi.org/10.1145/3772318.3790696" target="_blank" rel="noreferrer">DOI</a>
             </p>
           </div>
         </article>
 
-        <article class="research-item">
+        <article class="research-item" data-selected="true" data-topics="access">
           <div class="research-thumb">
             <img
               class="research-image"
@@ -204,69 +325,42 @@
           </div>
           <div class="research-body">
             <p class="research-tag">CHI 2026</p>
-            <h3>SituFont: A Just-in-Time Adaptive Intervention System for Enhancing Mobile Readability in Situational Visual Impairments</h3>
+            <h3>SituFont: A Just-in-Time Adaptive Intervention Interface for Enhancing Mobile Readability in Situational Visual Impairments</h3>
             <p class="research-authors">
-              <strong>Chen, J.</strong>*, Zhang, M.*, Nie, K.*, Yue, K., Yu, C., Gao, Z., Yang, J., Liang, C., Shi, Y.
+              <strong>Chen, J.</strong>*, Nie, K.*, Zhang, M.*, Yu, C., Gao, Z., Yue, K., Shi, Y., Liang, C.
             </p>
             <p>
               SituFont uses LLM-enabled, context-aware, human-in-the-loop typography adjustment to improve smartphone readability under changing real-world conditions.
             </p>
             <p class="research-links">
-              <a href="assets/pdfs/chi-2026-situfont.pdf" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm6 1.5V9h4.5"/>
-                  <path d="M8 16.5h1.4c1.35 0 2.2-.78 2.2-2.05s-.85-2.05-2.2-2.05H8v4.1Zm1.2-1.02v-2.06h.22c.7 0 1.16.38 1.16 1.03s-.46 1.03-1.16 1.03H9.2Zm3.52 1.02h1.2v-1.53h.95c1.02 0 1.76-.61 1.76-1.59s-.74-1.58-1.76-1.58h-2.15v4.7Zm1.2-2.52v-1.16h.73c.47 0 .76.22.76.58 0 .37-.29.58-.76.58h-.73Zm3.37 2.52h1.2v-1.88h1.74v-.99h-1.74v-.85h1.95v-.98h-3.15v4.7Z"/>
-                </svg>
-                <span>pdf</span>
-              </a>
-              <a href="https://dl.acm.org/doi/10.1145/3772318.3791020" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.59 13.41a1.99 1.99 0 0 0 2.82 0l3.18-3.18a2 2 0 1 0-2.83-2.83l-1.41 1.41"/>
-                  <path d="M13.41 10.59a1.99 1.99 0 0 0-2.82 0L7.4 13.77a2 2 0 1 0 2.83 2.83l1.41-1.41"/>
-                </svg>
-                <span>link</span>
-              </a>
+              <a href="assets/pdfs/chi-2026-situfont.pdf" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://doi.org/10.1145/3772318.3791020" target="_blank" rel="noreferrer">DOI</a>
             </p>
           </div>
         </article>
 
-        <article class="research-item">
+        <article class="research-item" data-selected="false" data-topics="access">
           <div class="research-thumb">
             <img
               class="research-image"
-              src="assets/papers/cscw-2026-adhd.png"
-              alt="Figure for ADHD task management paper"
+              src="assets/papers/ieee-vr-2026-mental-effort.png"
+              alt="Virtual reality environments used to evaluate multimodal mental-effort estimation"
             />
           </div>
           <div class="research-body">
-            <p class="research-tag">CSCW 2026</p>
-            <h3>"Not Just Me and My To-Do List": Understanding Challenges of Task Management for Adults with ADHD and the Need for AI-Augmented Social Scaffolds</h3>
+            <p class="research-tag">IEEE VR 2026</p>
+            <h3>Estimating Mental Effort in Virtual Reality Using Multimodal Biosignals</h3>
             <p class="research-authors">
-              <strong>Chen, J.</strong>*, Meng, Y.*, Nie, K.
+              Otono, R., <strong>Chen, J.</strong>, Karai, Z., Gupta, K., Murphy, P., Nunnerley, J., Billinghurst, M.
             </p>
             <p>
-              This paper shows how task management among adults with ADHD is relational and co-constructed, motivating socially aware AI systems for co-regulation and nonlinear attention rhythms.
+              This pilot study evaluates real-time mental-effort estimation in VR using EEG, ECG, and electrodermal activity.
             </p>
-            <p class="research-links">
-              <a href="assets/pdfs/cscw-2026-adhd.pdf" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm6 1.5V9h4.5"/>
-                  <path d="M8 16.5h1.4c1.35 0 2.2-.78 2.2-2.05s-.85-2.05-2.2-2.05H8v4.1Zm1.2-1.02v-2.06h.22c.7 0 1.16.38 1.16 1.03s-.46 1.03-1.16 1.03H9.2Zm3.52 1.02h1.2v-1.53h.95c1.02 0 1.76-.61 1.76-1.59s-.74-1.58-1.76-1.58h-2.15v4.7Zm1.2-2.52v-1.16h.73c.47 0 .76.22.76.58 0 .37-.29.58-.76.58h-.73Zm3.37 2.52h1.2v-1.88h1.74v-.99h-1.74v-.85h1.95v-.98h-3.15v4.7Z"/>
-                </svg>
-                <span>pdf</span>
-              </a>
-              <a href="https://arxiv.org/abs/2603.17258" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.59 13.41a1.99 1.99 0 0 0 2.82 0l3.18-3.18a2 2 0 1 0-2.83-2.83l-1.41 1.41"/>
-                  <path d="M13.41 10.59a1.99 1.99 0 0 0-2.82 0L7.4 13.77a2 2 0 1 0 2.83 2.83l1.41-1.41"/>
-                </svg>
-                <span>link</span>
-              </a>
-            </p>
+            <p class="research-links"><a href="https://doi.org/10.1109/VRW70859.2026.00312" target="_blank" rel="noreferrer">DOI</a></p>
           </div>
         </article>
 
-        <article class="research-item">
+        <article class="research-item" data-selected="false" data-topics="human-ai">
           <div class="research-thumb">
             <img
               class="research-image"
@@ -275,35 +369,43 @@
             />
           </div>
           <div class="research-body">
-            <p class="research-tag">CCS 2025 Workshop</p>
-            <h3>Towards Aligning Personalized Conversational Recommendation Agents with Users' Privacy Preferences</h3>
+            <p class="research-tag">HAIPS @ CCS 2025</p>
+            <h3>Towards Aligning Personalized AI Agents with Users' Privacy Preference</h3>
             <p class="research-authors">
               Zhang, S., Ma, Y., <strong>Chen, J.</strong>, Li, S., Yi, X., Li, H.
             </p>
             <p class="research-award">🏆 Distinguished Paper Award</p>
             <p>
-              We propose a conceptual framework for conversational recommendation agents that align user preferences while balancing privacy and utility.
+              This paper frames privacy management for personalized AI agents as an alignment problem that balances privacy and utility.
             </p>
             <p class="research-links">
-              <a href="assets/pdfs/ccs-2025-privacy.pdf" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm6 1.5V9h4.5"/>
-                  <path d="M8 16.5h1.4c1.35 0 2.2-.78 2.2-2.05s-.85-2.05-2.2-2.05H8v4.1Zm1.2-1.02v-2.06h.22c.7 0 1.16.38 1.16 1.03s-.46 1.03-1.16 1.03H9.2Zm3.52 1.02h1.2v-1.53h.95c1.02 0 1.76-.61 1.76-1.59s-.74-1.58-1.76-1.58h-2.15v4.7Zm1.2-2.52v-1.16h.73c.47 0 .76.22.76.58 0 .37-.29.58-.76.58h-.73Zm3.37 2.52h1.2v-1.88h1.74v-.99h-1.74v-.85h1.95v-.98h-3.15v4.7Z"/>
-                </svg>
-                <span>pdf</span>
-              </a>
-              <a href="https://dl.acm.org/doi/10.1145/3733816.3760752" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.59 13.41a1.99 1.99 0 0 0 2.82 0l3.18-3.18a2 2 0 1 0-2.83-2.83l-1.41 1.41"/>
-                  <path d="M13.41 10.59a1.99 1.99 0 0 0-2.82 0L7.4 13.77a2 2 0 1 0 2.83 2.83l1.41-1.41"/>
-                </svg>
-                <span>link</span>
-              </a>
+              <a href="assets/pdfs/ccs-2025-privacy.pdf" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://doi.org/10.1145/3733816.3760752" target="_blank" rel="noreferrer">DOI</a>
             </p>
           </div>
         </article>
 
-        <article class="research-item">
+        <article class="research-item" data-selected="false" data-topics="social">
+          <div class="research-thumb">
+            <div class="research-image research-placeholder paper-cover-creators" role="img" aria-label="CHI 2025 publication cover">
+              <span class="paper-cover-venue">CHI EA '25</span>
+              <span class="paper-cover-title">Creators + AI</span>
+            </div>
+          </div>
+          <div class="research-body">
+            <p class="research-tag">CHI 2025 Extended Abstracts</p>
+            <h3>Understanding Content Creators' Struggles and Expectations of AI in Direct Messaging</h3>
+            <p class="research-authors">
+              Kang, E. J., <strong>Chen, J.</strong>, Fussell, S. R.
+            </p>
+            <p>
+              This study identifies creators' challenges in managing direct messages and their expectations and concerns around AI-mediated communication.
+            </p>
+            <p class="research-links"><a href="https://doi.org/10.1145/3706599.3719901" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </article>
+
+        <article class="research-item" data-selected="false" data-topics="social">
           <div class="research-thumb">
             <img
               class="research-image"
@@ -321,23 +423,12 @@
               This paper examines how label detail and content stakes shape user perceptions of AI-generated images on social media.
             </p>
             <p class="research-links">
-              <a href="assets/pdfs/cscw-2025-ai-labels.pdf" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm6 1.5V9h4.5"/>
-                  <path d="M8 16.5h1.4c1.35 0 2.2-.78 2.2-2.05s-.85-2.05-2.2-2.05H8v4.1Zm1.2-1.02v-2.06h.22c.7 0 1.16.38 1.16 1.03s-.46 1.03-1.16 1.03H9.2Zm3.52 1.02h1.2v-1.53h.95c1.02 0 1.76-.61 1.76-1.59s-.74-1.58-1.76-1.58h-2.15v4.7Zm1.2-2.52v-1.16h.73c.47 0 .76.22.76.58 0 .37-.29.58-.76.58h-.73Zm3.37 2.52h1.2v-1.88h1.74v-.99h-1.74v-.85h1.95v-.98h-3.15v4.7Z"/>
-                </svg>
-                <span>pdf</span>
-              </a>
-              <a href="https://dl.acm.org/doi/10.1145/3715070.3749237" target="_blank" rel="noreferrer">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M10.59 13.41a1.99 1.99 0 0 0 2.82 0l3.18-3.18a2 2 0 1 0-2.83-2.83l-1.41 1.41"/>
-                  <path d="M13.41 10.59a1.99 1.99 0 0 0-2.82 0L7.4 13.77a2 2 0 1 0 2.83 2.83l1.41-1.41"/>
-                </svg>
-                <span>link</span>
-              </a>
+              <a href="assets/pdfs/cscw-2025-ai-labels.pdf" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://doi.org/10.1145/3715070.3749237" target="_blank" rel="noreferrer">DOI</a>
             </p>
           </div>
         </article>
+        </div>
       </section>
 
       <section class="section-block" id="experience">
