@@ -674,8 +674,8 @@ a:focus-visible {
 }
 
 .research-thumb {
-  flex: 0 0 180px;
-  width: 180px;
+  flex: 0 0 225px;
+  width: 225px;
   padding-top: 4px;
 }
 
@@ -694,48 +694,6 @@ a:focus-visible {
   object-position: center center;
   background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
   padding: 10px;
-}
-
-.research-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 16px;
-  color: #ffffff;
-  overflow: hidden;
-  position: relative;
-  isolation: isolate;
-}
-
-.research-placeholder::after {
-  content: "";
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  right: -24px;
-  bottom: -34px;
-  border: 18px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  z-index: -1;
-}
-
-.paper-cover-venue {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.paper-cover-title {
-  max-width: 145px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-}
-
-.paper-cover-creators {
-  background: linear-gradient(145deg, #8b6672, #826d48);
 }
 
 .research-body h3 {
@@ -905,7 +863,11 @@ a:focus-visible {
 
   .research-item {
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .research-thumb {
+    width: 190px;
   }
 
   .news-row {
