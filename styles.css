@@ -300,9 +300,9 @@ a:focus-visible {
   position: absolute;
   right: -18px;
   bottom: -12px;
-  width: clamp(240px, 26vw, 340px);
+  width: clamp(260px, 28vw, 380px);
   pointer-events: none;
-  opacity: 0.46;
+  opacity: 0.44;
   z-index: 0;
   isolation: isolate;
 }
@@ -311,9 +311,7 @@ a:focus-visible {
   content: "";
   position: absolute;
   inset: -5%;
-  background:
-    radial-gradient(ellipse at 52% 42%, transparent 0 40%, rgba(252, 251, 248, 0.18) 60%, rgba(252, 251, 248, 0.56) 78%, var(--bg) 97%),
-    linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.14) 62%, var(--bg) 100%);
+  background: linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.12) 68%, var(--bg) 100%);
   z-index: 1;
 }
 
@@ -833,6 +831,25 @@ a:focus-visible {
   letter-spacing: 0.01em;
 }
 
+.orca-source-note {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  margin: 8px 4px 0 auto;
+  padding: 5px 9px;
+  border: 1px solid rgba(215, 221, 229, 0.72);
+  border-radius: 999px;
+  background: rgba(252, 251, 248, 0.8);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.orca-source-note a {
+  font-weight: 600;
+}
+
 @media (max-width: 960px) {
   .hero {
     display: grid;
@@ -883,7 +900,7 @@ a:focus-visible {
   .orca-backdrop {
     right: -14px;
     bottom: -8px;
-    width: clamp(210px, 24vw, 280px);
+    width: clamp(230px, 28vw, 310px);
     opacity: 0.4;
   }
 }
@@ -996,8 +1013,8 @@ a:focus-visible {
   .orca-backdrop {
     right: -28px;
     bottom: 8px;
-    width: clamp(150px, 42vw, 210px);
-    opacity: 0.3;
+    width: clamp(170px, 46vw, 230px);
+    opacity: 0.32;
   }
 
   .research-item {
