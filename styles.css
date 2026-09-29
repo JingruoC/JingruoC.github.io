@@ -70,7 +70,7 @@ a:focus-visible {
 
 .top-nav a {
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 500;
   position: relative;
   text-decoration: none;
@@ -116,15 +116,15 @@ a:focus-visible {
 }
 
 .hero-profile {
-  flex: 0 0 280px;
-  width: 280px;
+  flex: 0 0 230px;
+  width: 230px;
   padding-top: 4px;
 }
 
 .portrait-frame {
-  width: 186px;
-  height: 186px;
-  margin-bottom: 20px;
+  width: 124px;
+  height: 124px;
+  margin-bottom: 10px;
   border-radius: 999px;
   padding: 5px;
   background: linear-gradient(145deg, #eef1f5, #f8f3e9);
@@ -145,7 +145,7 @@ a:focus-visible {
 
 .profile-copy h1 {
   margin: 0;
-  font-size: clamp(1.78rem, 2.45vw, 2.2rem);
+  font-size: clamp(1.58rem, 1.95vw, 1.84rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -158,21 +158,21 @@ a:focus-visible {
 }
 
 .profile-title {
-  margin-top: 14px;
-  font-size: 1rem;
+  margin-top: 7px;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--accent);
 }
 
 .profile-school {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .icon-links {
   display: flex;
   gap: 14px;
-  margin: 16px 0 14px;
+  margin: 8px 0 4px;
 }
 
 .icon-links a {
@@ -212,7 +212,7 @@ a:focus-visible {
 .contact-inline {
   margin: 0;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .hero-main {
@@ -229,12 +229,12 @@ a:focus-visible {
 
 .bio-block p {
   margin: 0 0 16px;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   line-height: 1.72;
 }
 
 .lede {
-  font-size: 1.05rem;
+  font-size: inherit;
 }
 
 .inline-highlight {
@@ -265,7 +265,7 @@ a:focus-visible {
 
 .section-heading h2 {
   margin: 0 0 10px;
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: var(--accent);
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -302,28 +302,23 @@ a:focus-visible {
   bottom: -12px;
   width: clamp(260px, 28vw, 380px);
   pointer-events: none;
-  opacity: 0.44;
   z-index: 0;
-  isolation: isolate;
 }
 
 .orca-backdrop::after {
-  content: "";
-  position: absolute;
-  inset: -5%;
-  background: linear-gradient(180deg, rgba(252, 251, 248, 0) 0%, rgba(252, 251, 248, 0.12) 68%, var(--bg) 100%);
-  z-index: 1;
+  display: none;
 }
 
 .orca-figure {
   display: block;
   width: 100%;
   height: auto;
+  opacity: 0.2;
   transform:
     translate3d(var(--orca-x), var(--orca-y), 0)
     rotate(2deg);
   transform-origin: center;
-  filter: grayscale(0.08) saturate(0.82) brightness(1.01) contrast(1.04);
+  filter: grayscale(0.08) saturate(0.72) brightness(1.06) contrast(0.9);
   animation: orca-drift 9s ease-in-out infinite;
 }
 
@@ -340,6 +335,11 @@ a:focus-visible {
   margin-top: var(--section-gap);
   position: relative;
   z-index: 1;
+}
+
+/* The compact profile column lets News sit closer to the end of the About copy. */
+.hero + .section-block {
+  margin-top: 20px;
 }
 
 .experience-grid {
@@ -415,7 +415,7 @@ a:focus-visible {
 .experience-line {
   color: var(--muted);
   line-height: 1.55;
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .experience-line strong {
@@ -451,7 +451,7 @@ a:focus-visible {
 }
 
 .section-heading a {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 600;
   transition:
     color var(--interactive-duration) var(--interactive-ease),
@@ -501,7 +501,7 @@ a:focus-visible {
 
 .news-row p {
   margin: 0;
-  font-size: 0.98rem;
+  font-size: 1rem;
   line-height: 1.52;
 }
 
@@ -516,7 +516,7 @@ a:focus-visible {
 .news-meta {
   margin: 0;
   min-width: 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.35;
   white-space: nowrap;
 }
@@ -593,7 +593,7 @@ a:focus-visible {
   padding: 9px 13px;
   border-radius: 10px;
   background: transparent;
-  font-size: 0.94rem;
+  font-size: 0.95rem;
 }
 
 #publication-view-selected:checked ~ .publication-toolbar label[for="publication-view-selected"],
@@ -643,7 +643,7 @@ a:focus-visible {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
 }
 
 #publication-topic-all:checked ~ .publication-toolbar label[for="publication-topic-all"],
@@ -704,13 +704,13 @@ a:focus-visible {
 .research-authors {
   margin: 0 0 10px;
   color: var(--muted);
-  font-size: 0.99rem;
+  font-size: 0.95rem;
 }
 
 .research-award {
   margin: -2px 0 10px;
   color: var(--accent-2);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
@@ -827,7 +827,7 @@ a:focus-visible {
   padding-top: 12px;
   border-top: 1px solid rgba(215, 221, 229, 0.72);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   letter-spacing: 0.01em;
 }
 
@@ -901,7 +901,6 @@ a:focus-visible {
     right: -14px;
     bottom: -8px;
     width: clamp(230px, 28vw, 310px);
-    opacity: 0.4;
   }
 }
 
@@ -948,7 +947,7 @@ a:focus-visible {
 
   .profile-title,
   .profile-school {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
 
   .icon-links {
@@ -973,6 +972,10 @@ a:focus-visible {
   }
 
   .section-block {
+    margin-top: 24px;
+  }
+
+  .hero + .section-block {
     margin-top: 24px;
   }
 
@@ -1014,7 +1017,10 @@ a:focus-visible {
     right: -28px;
     bottom: 8px;
     width: clamp(170px, 46vw, 230px);
-    opacity: 0.32;
+  }
+
+  .orca-figure {
+    opacity: 0.24;
   }
 
   .research-item {
@@ -1039,7 +1045,7 @@ a:focus-visible {
   }
 
   .research-links a {
-    font-size: 0.84rem;
+    font-size: 0.88rem;
   }
 
   .experience-panel {
@@ -1048,7 +1054,7 @@ a:focus-visible {
   }
 
   .experience-line {
-    font-size: 0.96rem;
+    font-size: 1rem;
   }
 
   .contact-block {
@@ -1072,7 +1078,7 @@ a:focus-visible {
   }
 
   .top-nav a {
-    font-size: 0.94rem;
+    font-size: 0.95rem;
   }
 
   .portrait-frame {
@@ -1085,7 +1091,7 @@ a:focus-visible {
   }
 
   .bio-block p {
-    font-size: 0.98rem;
+    font-size: 1rem;
   }
 
   .news-list-panel,
